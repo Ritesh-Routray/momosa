@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Image from "next/image";
 import Title from "./ui/Title";
 
@@ -13,7 +14,7 @@ const About = () => {
         <div className="md:w-1/2 ">
           <Title addClass="text-[40px]">We Are momoSA</Title>
           <p className="my-5 flex flex-col items-center">
-            At momoSA, we believe that food should be as unique as you are. That’s why we specialize in customizable momos, allowing you to craft the perfect combination of flavors. Whether you're a fan of classic fillings or adventurous new ingredients, we've got something for everyone.
+            At momoSA, we believe that food should be as unique as you are. Thats why we specialize in customizable momos, allowing you to craft the perfect combination of flavors. Whether you are a fan of classic fillings or adventurous new ingredients, we have got something for everyone.
           </p>
           <button className="btn-primary">Read More</button>
         </div>
