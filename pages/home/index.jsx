@@ -13,7 +13,8 @@ const Index = ({ categoryList, productList }) => {
       <Campaigns />
       <MenuWrapper categoryList={categoryList} productList={productList} />
       <About />
-      <Customers />
+      <Customers />\
+      <Reservation/>
     </React.Fragment>
   );
 };
