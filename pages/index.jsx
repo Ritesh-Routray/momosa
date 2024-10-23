@@ -23,15 +23,28 @@ export default function Index({ categoryList, productList }) {
   );
 }
 
+import axios from 'axios';
+
 export const getServerSideProps = async () => {
-  const res = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/categories`);
-  const product = await axios.get(
-    `${process.env.NEXT_PUBLIC_API_URL}/products`
-  );
-  return {
-    props: {
-      categoryList: res.data ? res.data : [],
-      productList: product.data ? product.data : [],
-    },
-  };
+  try {
+    const res = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/categories`);
+    const product = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/products`);
+
+    return {
+      props: {
+        categoryList: res.data || [],
+        productList: product.data || [],
+      },
+    };
+  } catch (error) {
+    console.error("Error fetching data:", error.message);
+
+    return {
+      props: {
+        categoryList: [],
+        productList: [],
+      },
+    };
+  }
 };
+
