@@ -18,4 +18,3 @@ momoSA is a customizable ordering platform for momo lovers! Our website allows c
 ## Installation
 
 1. **Clone the repository**:
-   ```bash
